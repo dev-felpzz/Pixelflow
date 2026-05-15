@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelFlow — Desenvolvimento Web Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PARTICLES -->
+    <canvas id="particles"></canvas>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="mobile-close" onclick="closeMobileMenu()">✕</span>
+        <a href="#home" onclick="closeMobileMenu()">Home</a>
+        <a href="#servicos" onclick="closeMobileMenu()">Serviços</a>
+        <a href="#sobre" onclick="closeMobileMenu()">Sobre</a>
+        <a href="#tecnologias" onclick="closeMobileMenu()">Tecnologias</a>
+        <a href="#projetos" onclick="closeMobileMenu()">Portfólio</a>
+        <a href="#contato" onclick="closeMobileMenu()">Contato</a>
+        <button class="btn-cta" onclick="closeMobileMenu()">Vamos conversar →</button>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a href="#home" class="nav-logo">
+            <img src="img/p.png" alt="PixelFlow" class="logo-p">
+            <img src="img/pixelflow.png" alt="PixelFlow" class="logo-name">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#tecnologias">Tecnologias</a></li>
+            <li><a href="#projetos">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button class="btn-cta nav-cta-desktop">Vamos conversar →</button>
+        <div class="hamburger" onclick="openMobileMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home">
+        <!-- PARALLAX BACKGROUND -->
+        <div class="parallax-bg" id="parallaxBg"></div>
+        <div class="parallax-overlay"></div>
+        <div class="hero-lines"></div>
+
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="hero-badge">Soluções digitais que impulsionam negócios</div>
+                <h1 class="hero-title">
+                    Transformamos ideias em experiências <span class="accent">digitais incríveis.</span>
+                </h1>
+                <p class="hero-sub">Criamos sites, sistemas web e soluções modernas para empresas que querem crescer no
+                    digital.</p>
+                <div class="hero-btns">
+                    <button class="btn-primary">Solicitar orçamento →</button>
+                    <button class="btn-outline">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M3 9h18M9 21V9" />
+                        </svg>
+                        Ver projetos
+                    </button>
+                </div>
+                <div class="hero-chips">
+                    <span class="chip">
+                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+                            viewBox="0 0 24 24">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                        Entrega rápida
+                    </span>
+                    <span class="chip">
+                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+                            viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 8v4l3 3" />
+                        </svg>
+                        Tecnologia moderna
+                    </span>
+                    <span class="chip">
+                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+                            viewBox="0 0 24 24">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                        </svg>
+                        Suporte dedicado
+                    </span>
+                    <span class="chip">
+                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+                            viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        Segurança
+                    </span>
+                    <span class="chip">
+                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+                            viewBox="0 0 24 24">
+                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                            <polyline points="16 7 22 7 22 13" />
+                        </svg>
+                        Resultados
+                    </span>
+                </div>
+            </div>
+
+            <!-- DASHBOARD MOCKUP -->
+            <div class="hero-visual">
+                <div class="glow-ring"></div>
+                <div class="dashboard">
+                    <div class="dash-header">
+                        <div class="dash-dots">
+                            <div class="dash-dot r"></div>
+                            <div class="dash-dot y"></div>
+                            <div class="dash-dot g"></div>
+                        </div>
+                        <div class="dash-title">PixelFlow — Dashboard</div>
+                        <div style="font-size:0.65rem;color:var(--neon-light);">● Live</div>
+                    </div>
+                    <div class="dash-body">
+                        <div class="dash-sidebar">
+                            <div
+                                style="font-size:0.65rem;color:var(--gray);padding:4px 10px 10px;font-weight:600;letter-spacing:0.06em">
+                                MENU</div>
+                            <div class="dash-nav-item active">
+                                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <rect x="3" y="3" width="7" height="7" />
+                                    <rect x="14" y="3" width="7" height="7" />
+                                    <rect x="3" y="14" width="7" height="7" />
+                                    <rect x="14" y="14" width="7" height="7" />
+                                </svg>
+                                Dashboard
+                            </div>
+                            <div class="dash-nav-item">
+                                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
+                                </svg>
+                                Projetos
+                            </div>
+                            <div class="dash-nav-item">
+                                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                </svg>
+                                Clientes
+                            </div>
+                            <div class="dash-nav-item">
+                                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                                </svg>
+                                Mensagens
+                            </div>
+                            <div class="dash-nav-item">
+                                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" />
+                                    <line x1="12" y1="18" x2="12" y2="18" />
+                                </svg>
+                                Relatórios
+                            </div>
+                            <div class="dash-nav-item">
+                                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path
+                                        d="M19.07 4.93l-1.41 1.41M5.34 18.66l-1.41 1.41M19.07 19.07l-1.41-1.41M5.34 5.34L3.93 3.93" />
+                                </svg>
+                                Config
+                            </div>
+                        </div>
+                        <div class="dash-main">
+                            <div class="dash-metrics">
+                                <div class="metric-card">
+                                    <div class="metric-label">Projetos ativos</div>
+                                    <div class="metric-val">24</div>
+                                    <div class="metric-delta">↑ +12% este mês</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-label">Clientes</div>
+                                    <div class="metric-val">56</div>
+                                    <div class="metric-delta">↑ +8% este mês</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-label">Concluídos</div>
+                                    <div class="metric-val">98</div>
+                                    <div class="metric-delta">↑ +15% este mês</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-label">Avaliações</div>
+                                    <div class="metric-val">4.9</div>
+                                    <div class="metric-delta" style="color:#FCD34D">★ Excelente</div>
+                                </div>
+                            </div>
+                            <div class="dash-chart">
+                                <div class="chart-header">
+                                    <div class="chart-title">Desempenho dos projetos</div>
+                                    <div class="chart-badge">Este mês</div>
+                                </div>
+                                <div class="chart-area">
+                                    <svg viewBox="0 0 380 80" preserveAspectRatio="none">
+                                        <defs>
+                                            <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stop-color="#F97316" stop-opacity="0.3" />
+                                                <stop offset="100%" stop-color="#F97316" stop-opacity="0" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M0,60 C40,50 80,35 120,40 C160,45 200,25 240,20 C280,15 320,30 380,15"
+                                            fill="none" stroke="#F97316" stroke-width="2" />
+                                        <path
+                                            d="M0,60 C40,50 80,35 120,40 C160,45 200,25 240,20 C280,15 320,30 380,15 V80 H0Z"
+                                            fill="url(#chartGrad)" />
+                                        <circle cx="240" cy="20" r="4" fill="#F97316" />
+                                        <circle cx="380" cy="15" r="4" fill="#FB923C" />
+                                    </svg>
+                                </div>
+                                <div style="display:flex;gap:12px;margin-top:6px">
+                                    <span style="font-size:0.58rem;color:var(--gray)">Jan</span>
+                                    <span style="font-size:0.58rem;color:var(--gray)">Fev</span>
+                                    <span style="font-size:0.58rem;color:var(--gray)">Mar</span>
+                                    <span style="font-size:0.58rem;color:var(--gray)">Abr</span>
+                                    <span style="font-size:0.58rem;color:var(--gray)">Mai</span>
+                                    <span style="font-size:0.58rem;color:var(--neon-light);font-weight:600">Jun</span>
+                                </div>
+                            </div>
+                            <div class="dash-activities">
+                                <div style="font-size:0.68rem;font-weight:600;color:var(--white);margin-bottom:6px">
+                                    Atividades recentes</div>
+                                <div class="activity-item">
+                                    <div class="activity-dot" style="background:#FB923C"></div>
+                                    <div class="activity-text">Novo projeto criado — Sistema de Agendamento</div>
+                                    <div class="activity-time">2h</div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-dot" style="background:#FBBF24"></div>
+                                    <div class="activity-text">Layout aprovado — Landing Page Clínica</div>
+                                    <div class="activity-time">5h</div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-dot" style="background:#34D399"></div>
+                                    <div class="activity-text">Projeto concluído — Dashboard Financeiro</div>
+                                    <div class="activity-time">1d</div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-dot"></div>
+                                    <div class="activity-text">Novo cliente — Empresa Tech Solutions</div>
+                                    <div class="activity-time">2d</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- SERVICES -->
+    <section id="servicos">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-tag">Serviços</div>
+                <h2 class="section-title">Soluções completas para acelerar o seu negócio</h2>
+                <p class="section-sub">Unimos tecnologia, design e estratégia para entregar soluções digitais modernas,
+                    rápidas e eficientes.</p>
+            </div>
+                <div class="services-grid">
+                <div class="service-card reveal reveal-delay-1" data-service>
+                    <div class="service-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            viewBox="0 0 24 24">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Sites e aplicações modernas, responsivas e otimizadas para o melhor desempenho e experiência do
+                        usuário.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            viewBox="0 0 24 24">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3>Sistemas Personalizados</h3>
+                    <p>Soluções completas para automatizar e simplificar os processos do seu negócio com eficiência.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                        </svg>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Interfaces intuitivas e atraentes que proporcionam a melhor experiência e convertem visitantes em
+                        clientes.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            viewBox="0 0 24 24">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                    </div>
+                    <h3>Landing Pages</h3>
+                    <p>Páginas estratégicas e otimizadas para conversão que transformam visitantes em clientes e geram
+                        resultados.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            viewBox="0 0 24 24">
+                            <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" />
+                            <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" />
+                        </svg>
+                    </div>
+                    <h3>Integrações</h3>
+                    <p>Integramos sistemas, APIs e ferramentas para otimizar e automatizar seus processos de negócio.
+                    </p>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3>Manutenção & Suporte</h3>
+                    <p>Suporte contínuo e manutenção preventiva para manter tudo funcionando com performance máxima.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- ABOUT -->
+    <section id="sobre">
+        <div class="about-inner">
+            <div class="about-text reveal">
+                <div class="section-tag">Sobre nós</div>
+                <h2 class="about-title">Código. Design.<br>Estratégia. Resultado.</h2>
+                <p class="about-p">A PixelFlow nasceu para ajudar empresas e empreendedores a transformar ideias em
+                    soluções digitais de alto impacto.</p>
+                <p class="about-p">Unimos tecnologia, design e estratégia para entregar produtos que geram valor real e
+                    impulsionam negócios.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card reveal reveal-delay-1">
+                        <div class="stat-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
+                            </svg>
+                        </div>
+                        <div class="stat-val">50+</div>
+                        <div class="stat-label">Projetos entregues</div>
+                    </div>
+
+                    <div class="stat-card reveal reveal-delay-2">
+                        <div class="stat-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                            </svg>
+                        </div>
+                        <div class="stat-val">30+</div>
+                        <div class="stat-label">Clientes satisfeitos</div>
+                    </div>
+
+                    <div class="stat-card reveal reveal-delay-3">
+                        <div class="stat-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                        </div>
+                        <div class="stat-val">98%</div>
+                        <div class="stat-label">Taxa de satisfação</div>
+                    </div>
+
+                    <div class="stat-card reveal reveal-delay-4">
+                        <div class="stat-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <div class="stat-val">2+</div>
+                        <div class="stat-label">Anos de experiência</div>
+                    </div>
+                </div>
+
+                <button class="btn-primary">Saiba mais sobre nós →</button>
+            </div>
+
+            <div class="about-visual reveal reveal-delay-2">
+                <div class="p-glow-container">
+                    <div class="p-ring"></div>
+                    <div class="p-ring"></div>
+                    <div class="p-ring"></div>
+                    <img src="./img/p.png" alt="Logo PixelFlow" class="p-logo-3d">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- TECHNOLOGIES -->
+    <section id="tecnologias">
+        <div class="container text-center">
+            <div class="reveal">
+                <div class="section-tag">Tecnologias</div>
+                <h2 class="section-title" style="margin:0 auto 16px">Tecnologias que usamos</h2>
+                <p class="section-sub">Stack moderna e robusta para construir soluções de alta performance.</p>
+            </div>
+            <div class="tech-grid reveal">
+                <div class="tech-pill">
+                    <img src="./img/html.png" alt="">
+                    HTML
+                </div>
+                <div class="tech-pill">
+                    <img src="./img/css.png" alt="">
+                    CSS
+                </div>
+                <div class="tech-pill">
+                    <img src="./img/js.png" alt="">
+                    JavaScript
+                </div>
+                <div class="tech-pill">
+                    <img src="./img/react.png" alt="">
+                    React
+                </div>
+                <div class="tech-pill">
+                    <img src="./img/python.png" alt="">
+                    Python
+                </div>
+                <div class="tech-pill">
+                    <img src="./img/mysql.png" alt="">
+                    MySQL
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- PROJECTS -->
+    <section id="projetos">
+        <div class="container">
+            <div class="projects-header reveal">
+                <div>
+                    <div class="section-tag">Portfólio</div>
+                    <h2 class="section-title" style="margin-bottom:0">Alguns projetos que já transformamos em realidade
+                    </h2>
+                </div>
+                <button class="btn-outline">Ver todos os projetos →</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal reveal-delay-1">
+                    <div class="project-thumb">
+                        <div class="project-thumb-inner">
+                            <svg width="100%" height="100%" viewBox="0 0 400 180" fill="none">
+                                <rect width="400" height="180" fill="#150a00" />
+                                <rect x="20" y="20" width="100" height="140" rx="8" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <rect x="130" y="20" width="250" height="65" rx="8" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <rect x="130" y="95" width="120" height="65" rx="8" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <rect x="260" y="95" width="120" height="65" rx="8" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <path d="M145 90 C165 70 185 85 205 65 C225 45 245 55 265 40 C285 25 305 35 375 30"
+                                    stroke="#F97316" stroke-width="2" fill="none" />
+                                <path
+                                    d="M145 90 C165 70 185 85 205 65 C225 45 245 55 265 40 C285 25 305 35 375 30 V90 H145Z"
+                                    fill="rgba(249,115,22,0.1)" />
+                                <text x="155" y="125" font-size="10" fill="#F97316" font-family="monospace">24</text>
+                                <text x="198" y="125" font-size="10" fill="#F97316" font-family="monospace">56</text>
+                                <text x="241" y="125" font-size="10" fill="#FB923C" font-family="monospace">98</text>
+                                <text x="284" y="125" font-size="10" fill="#FCD34D" font-family="monospace">4.9</text>
+                                <text x="324" y="125" font-size="8" fill="#34D399" font-family="monospace">Active</text>
+                            </svg>
+                        </div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tag">Sistema Web</div>
+                        <h3>Agenda Fácil</h3>
+                        <p>Sistema de agendamentos online com painel administrativo completo e integração de pagamentos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-2">
+                    <div class="project-thumb">
+                        <div class="project-thumb-inner">
+                            <svg width="100%" height="100%" viewBox="0 0 400 180" fill="none">
+                                <rect width="400" height="180" fill="#150a00" />
+                                <rect x="20" y="15" width="360" height="50" rx="8" fill="rgba(234,88,12,0.15)"
+                                    stroke="rgba(234,88,12,0.3)" stroke-width="1" />
+                                <circle cx="55" cy="40" r="12" fill="#EA580C" opacity="0.7" />
+                                <rect x="320" y="25" width="50" height="28" rx="14" fill="#EA580C" />
+                                <text x="328" y="43" font-size="9" fill="#fff" font-family="sans-serif">Agendar</text>
+                                <rect x="20" y="80" width="170" height="85" rx="8" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <rect x="200" y="80" width="180" height="40" rx="8" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <rect x="200" y="125" width="180" height="40" rx="8" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <circle cx="80" cy="115" r="22" fill="rgba(234,88,12,0.2)" stroke="#EA580C"
+                                    stroke-width="1" />
+                                <text x="65" y="120" font-size="20" fill="#F97316">+</text>
+                                <rect x="110" y="130" width="50" height="14" rx="7" fill="#EA580C" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tag">Landing Page</div>
+                        <h3>Clínica Vitalis</h3>
+                        <p>Landing page moderna e otimizada para alta conversão de pacientes com agendamento online.</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-3">
+                    <div class="project-thumb">
+                        <div class="project-thumb-inner">
+                            <svg width="100%" height="100%" viewBox="0 0 400 180" fill="none">
+                                <rect width="400" height="180" fill="#150a00" />
+                                <rect x="15" y="15" width="370" height="35" rx="6" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <text x="32" y="36" font-size="9" fill="#FB923C" font-family="monospace">R$
+                                    128.430</text>
+                                <rect x="310" y="22" width="65" height="18" rx="9" fill="#EA580C" />
+                                <text x="318" y="35" font-size="8" fill="#fff" font-family="sans-serif">+
+                                    Transação</text>
+                                <rect x="15" y="58" width="115" height="55" rx="6" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <rect x="138" y="58" width="115" height="55" rx="6" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <rect x="261" y="58" width="124" height="55" rx="6" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <text x="25" y="76" font-size="7" fill="#C4A99A" font-family="sans-serif">Receita
+                                    Total</text>
+                                <text x="25" y="92" font-size="14" font-weight="bold" fill="#FB923C"
+                                    font-family="monospace">R$128k</text>
+                                <text x="25" y="104" font-size="7" fill="#34D399" font-family="sans-serif">↑ +18%</text>
+                                <text x="148" y="76" font-size="7" fill="#C4A99A"
+                                    font-family="sans-serif">Despesas</text>
+                                <text x="148" y="92" font-size="14" font-weight="bold" fill="#F87171"
+                                    font-family="monospace">R$43k</text>
+                                <text x="271" y="76" font-size="7" fill="#C4A99A" font-family="sans-serif">Lucro
+                                    Líquido</text>
+                                <text x="271" y="92" font-size="14" font-weight="bold" fill="#34D399"
+                                    font-family="monospace">R$85k</text>
+                                <rect x="15" y="121" width="370" height="44" rx="6" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <path
+                                    d="M25 155 C50 145 75 150 100 138 C125 126 150 140 175 130 C200 120 225 132 250 122 C275 112 300 125 350 115 C365 110 375 118 385 112"
+                                    stroke="#F97316" stroke-width="1.5" fill="none" />
+                                <path
+                                    d="M25 155 C50 145 75 150 100 138 C125 126 150 140 175 130 C200 120 225 132 250 122 C275 112 300 125 350 115 C365 110 375 118 385 112 V165 H25Z"
+                                    fill="rgba(249,115,22,0.08)" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tag">Dashboard</div>
+                        <h3>Finance Dashboard</h3>
+                        <p>Dashboard financeiro completo com relatórios, gráficos e métricas em tempo real.</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-1">
+                    <div class="project-thumb">
+                        <div class="project-thumb-inner">
+                            <svg width="100%" height="100%" viewBox="0 0 400 180" fill="none">
+                                <rect width="400" height="180" fill="#150a00" />
+                                <rect x="15" y="15" width="85" height="150" rx="6" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <rect x="108" y="15" width="277" height="70" rx="6" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <rect x="108" y="93" width="277" height="72" rx="6" fill="#1a0e00" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <text x="155" y="125" font-size="8" fill="#FB923C" font-family="monospace">340</text>
+                                <text x="192" y="125" font-size="8" fill="#FBBF24" font-family="monospace">128</text>
+                                <text x="259" y="125" font-size="8" fill="#34D399" font-family="monospace">58</text>
+                                <rect x="172" y="149" width="100" height="14" rx="7" fill="#EA580C" />
+                            </svg>
+                        </div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tag">Sistema Web</div>
+                        <h3>Control Estoque</h3>
+                        <p>Sistema de controle de estoque com relatórios, alertas automáticos e gestão de produtos.</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-2">
+                    <div class="project-thumb">
+                        <div class="project-thumb-inner">
+                            <svg width="100%" height="100%" viewBox="0 0 400 180" fill="none">
+                                <rect width="400" height="180" fill="#100600" />
+                                <text x="20" y="38" font-size="16" font-weight="bold" fill="#fff"
+                                    font-family="sans-serif">Pixel<tspan fill="#F97316">Flow</tspan></text>
+                                <rect x="344" y="16" width="36" height="18" rx="9" fill="#EA580C" />
+                                <text x="353" y="29" font-size="7" fill="#fff" font-family="sans-serif">Talk</text>
+                                <text x="20" y="90" font-size="11" font-weight="bold" fill="#fff"
+                                    font-family="sans-serif">Transformamos ideias em</text>
+                                <text x="20" y="108" font-size="11" font-weight="bold" fill="#fff"
+                                    font-family="sans-serif">experiências <tspan fill="#F97316">digitais incríveis.
+                                    </tspan></text>
+                                <rect x="20" y="148" width="90" height="18" rx="9" fill="#EA580C" />
+                                <rect x="118" y="148" width="80" height="18" rx="9" fill="transparent" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <text x="29" y="161" font-size="7" fill="#fff" font-family="sans-serif">Orçamento</text>
+                                <text x="127" y="161" font-size="7" fill="#C4A99A" font-family="sans-serif">Ver
+                                    projetos</text>
+                            </svg>
+                        </div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tag">Landing Page</div>
+                        <h3>PixelFlow Site</h3>
+                        <p>Site institucional da PixelFlow com design moderno, responsivo e alta performance.</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-3">
+                    <div class="project-thumb">
+                        <div class="project-thumb-inner">
+                            <svg width="100%" height="100%" viewBox="0 0 400 180" fill="none">
+                                <rect width="400" height="180" fill="#150a00" />
+                                <rect x="15" y="15" width="370" height="150" rx="8" fill="#0e0700" stroke="#3D1A00"
+                                    stroke-width="1" />
+                                <rect x="30" y="30" width="340" height="30" rx="5" fill="#1a0e00" />
+                                <rect x="280" y="37" width="70" height="14" rx="7" fill="#EA580C" />
+                                <text x="288" y="48" font-size="8" fill="#fff" font-family="sans-serif">+ Novo
+                                    Evento</text>
+                                <rect x="30" y="72" width="78" height="78" rx="5" fill="#1a0e00" stroke="#EA580C"
+                                    stroke-width="1" />
+                                <rect x="116" y="72" width="78" height="78" rx="5" fill="#1a0e00" />
+                                <rect x="202" y="72" width="78" height="78" rx="5" fill="#1a0e00" />
+                                <rect x="288" y="72" width="72" height="78" rx="5" fill="#1a0e00" />
+                                <circle cx="55" cy="141" r="6" fill="rgba(234,88,12,0.3)" stroke="#EA580C"
+                                    stroke-width="1" />
+                                <text x="51" y="145" font-size="8" fill="#F97316">+</text>
+                            </svg>
+                        </div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tag">Aplicativo Web</div>
+                        <h3>EventHub Pro</h3>
+                        <p>Plataforma de gestão de eventos com calendário, inscrições e controle de participantes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- CTA -->
+    <section id="contato">
+        <div class="cta-inner reveal">
+            <div class="cta-icon">
+                <img src="./img/mensagem.png" alt="">
+            </div>
+            <h2 class="cta-title">Pronto para transformar sua ideia em realidade?</h2>
+            <p class="cta-sub">Vamos conversar sobre seu projeto e criar algo incrível juntos.</p>
+            <button class="btn-primary" style="font-size:1rem;padding:15px 36px">Entrar em contato →</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <!-- Brand Section -->
+            <div class="footer-brand">
+                <div class="nav-logo" style="margin-bottom: 0; gap: 8px;">
+                    <img src="img/p.png" alt="PixelFlow" class="logo-p" style="height: 70px;">
+                    <img src="img/pixelflow.png" alt="PixelFlow" class="logo-name" style="height: 60px;">
+                </div>
+                <p>Transformamos ideias em soluções digitais modernas, eficientes e que geram resultados reais para o
+                    seu negócio.</p>
+
+                <div class="footer-socials">
+                    <div class="social-btn">
+                        <img src="img/facebook.png" alt="Facebook">
+                    </div>
+                    <div class="social-btn">
+                        <img src="img/instagram.png" alt="Instagram">
+                    </div>
+                    <div class="social-btn">
+                        <img src="img/linkedin.png" alt="LinkedIn">
+                    </div>
+                    <div class="social-btn">
+                        <img src="img/github.png" alt="GitHub">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Portfólio</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#">Desenvolvimento Web</a></li>
+                    <li><a href="#">Sistemas Personalizados</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Landing Pages</a></li>
+                    <li><a href="#">Integrações</a></li>
+                    <li><a href="#">Manutenção & Suporte</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <div class="footer-contact-item">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    contato@pixelflow.com.br
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path
+                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.08 6.08l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                    </svg>
+                    (11) 99999-9999
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    São Paulo, SP — Brasil
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 PixelFlow. Todos os direitos reservados.</p>
+            <p>Desenvolvido com <span>♥</span> para impulsionar negócios.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ── PARTICLES ──
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        let W, H, particles = [];
+
+        function resize() {
+            W = canvas.width = window.innerWidth;
+            H = canvas.height = window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * W;
+                this.y = Math.random() * H;
+                this.r = Math.random() * 1.5 + 0.3;
+                this.vx = (Math.random() - 0.5) * 0.3;
+                this.vy = (Math.random() - 0.5) * 0.3;
+                this.a = Math.random() * 0.4 + 0.1;
+            }
+            update() {
+                this.x += this.vx; this.y += this.vy;
+                if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset();
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(249,115,22,${this.a})`;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 100; i++) particles.push(new Particle());
+
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(234,88,12,${0.06 * (1 - dist / 120)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, W, H);
+            particles.forEach(p => { p.update(); p.draw(); });
+            drawConnections();
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // ── PARALLAX ──
+        const parallaxBg = document.getElementById('parallaxBg');
+        function handleParallax() {
+            const scrollY = window.scrollY;
+            const homeSection = document.getElementById('home');
+            const homeHeight = homeSection.offsetHeight;
+            if (scrollY <= homeHeight) {
+                parallaxBg.style.transform = `translateY(${scrollY * 0.45}px)`;
+            }
+        }
+        window.addEventListener('scroll', handleParallax, { passive: true });
+
+        // ── NAVBAR SCROLL ──
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 40);
+        }, { passive: true });
+
+        // ── MOBILE MENU ──
+        function openMobileMenu() { document.getElementById('mobileMenu').classList.add('open'); }
+        function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+        // ── SCROLL REVEAL ──
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
