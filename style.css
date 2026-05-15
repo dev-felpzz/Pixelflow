@@ -35,7 +35,19 @@ body {
   color: var(--white);
   overflow-x: hidden;
   line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  max-width: 100%;
+}
+
 
 ::selection {
   background: var(--neon);
@@ -695,18 +707,7 @@ section {
   animation: ringPulse 4s 1s ease-in-out infinite;
 }
 
-@keyframes ringPulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.4;
-  }
 
-  50% {
-    transform: scale(1.05);
-    opacity: 0.8;
-  }
-}
 
 /* ── SERVICES ── */
 #servicos {
@@ -988,8 +989,18 @@ section {
 
 /* Responsividade */
 @media (max-width: 768px) {
+  /* Geral */
+  nav {
+    padding: 16px 28px;
+  }
+
+  nav.scrolled {
+    padding: 12px 28px;
+  }
+
+  /* Sobre */
   #sobre {
-    padding: 60px 24px;
+    padding: 70px 24px;
   }
 
   .about-inner {
@@ -1016,7 +1027,34 @@ section {
     width: 120px;
     height: 120px;
   }
+
+  /* Hero: mantém 2 colunas até 640, mas melhora o espaçamento */
+  #home {
+    padding: 110px 28px 70px;
+  }
+
+  .hero-inner {
+    gap: 36px;
+  }
+
+  /* Serviços/Projetos/CTA em telas menores */
+  #servicos,
+  #tecnologias,
+  #projetos,
+  #contato {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 
 @media (max-width: 480px) {
   #sobre {
@@ -1117,6 +1155,7 @@ section {
   object-fit: contain;
   filter: drop-shadow(0 0 14px rgba(249, 115, 22, 0.25));
 }
+
 
 @media (max-width: 900px) {
   .tech-grid {
@@ -1423,32 +1462,302 @@ footer {
 }
 
 @media (max-width: 640px) {
+
+  nav {
+    padding: 14px 18px;
+  }
+
+  nav.scrolled {
+    padding: 10px 18px;
+  }
+
+  .nav-logo .logo-p {
+    height: 44px;
+  }
+
+  .nav-logo .logo-name {
+    height: 28px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* HERO */
+  #home {
+    padding: 100px 18px 60px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    text-align: center;
+  }
+
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-chips {
+    justify-content: center;
+  }
+
+  /* SECTIONS */
+  #servicos,
+  #sobre,
+  #tecnologias,
+  #projetos,
+  #contato {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   footer {
     padding: 50px 20px 24px;
   }
 
-  .footer-grid {
+  /* TEAM CARDS */
+  .team-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
   }
 
-  .social-btn {
-    width: 44px;
-    height: 44px;
-  }
-
-  .social-btn img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    gap: 12px;
-  }
-
-  .footer-bottom p {
-    font-size: 0.75rem;
+  /* PROFILE CARDS */
+  .profile-team-grid {
+    grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 900px) and (orientation: landscape) {
+  /* No landscape, reduz um pouco os espaçamentos para evitar rolagem excessiva */
+  nav {
+    padding: 14px 22px;
+  }
+
+  nav.scrolled {
+    padding: 10px 22px;
+  }
+
+  #home {
+    min-height: 90vh;
+    padding: 96px 22px 50px;
+  }
+
+  .hero-inner {
+    gap: 28px;
+  }
+
+  #servicos,
+  #sobre,
+  #tecnologias,
+  #projetos,
+  #contato {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+/* ========= SEÇÃO CARDS PERFIL (Profile Team Cards) ========= */
+.profile-team-section {
+  width: 100%;
+  padding: 100px 8%;
+  background: var(--bg-deep);
+  overflow: hidden;
+}
+
+
+.profile-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.profile-section-tag {
+  display: inline-block;
+  color: #ff8c00;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.profile-section-header h2 {
+  color: #ffffff;
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.profile-section-header p {
+  color: #b5b5b5;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.profile-team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+@media (max-width: 1100px) {
+  .profile-team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-team-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+.profile-team-card {
+  position: relative;
+  height: 360px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 140, 0, 0.25);
+}
+
+/* Estado inicial */
+.profile-card-front {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+  transition: 0.3s ease;
+  z-index: 2;
+}
+
+.profile-team-card:hover .profile-card-front {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.profile-initials {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 3px solid #ff8c00;
+  background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff8c00;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.profile-card-front span {
+  color: #8f8f8f;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Hover */
+.profile-card-hover {
+  position: absolute;
+  inset: 0;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: 0.3s ease;
+}
+
+.profile-team-card:hover .profile-card-hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.profile-card-hover img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 5px solid #ff8c00;
+  margin-bottom: 22px;
+  transition: 0.3s ease;
+}
+
+.profile-team-card:hover img {
+  transform: scale(1.05);
+}
+
+.profile-card-content {
+  text-align: center;
+}
+
+.profile-card-content h3 {
+  color: #111111;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.profile-card-content p {
+  color: #333333;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .profile-team-section {
+    padding: 80px 6%;
+  }
+
+  .profile-section-header h2 {
+    font-size: 32px;
+  }
+
+  .profile-team-card {
+    height: 340px;
+  }
+}
+
+
+
+
+
