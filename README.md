@@ -1,254 +1,222 @@
+# README — PixelFlow
+
 # PixelFlow — Desenvolvimento Web Premium
 
 ![PixelFlow](img/pixelflow.png)
 
-> Transformamos ideias em soluções digitais modernas, eficientes e que geram resultados reais para o seu negócio.
+> Transformamos ideias em soluções digitais modernas, eficientes e que geram resultados reais.
 
 ## 📋 Sobre o Projeto
 
-PixelFlow é uma agência digital moderna especializada em desenvolvimento web, design UI/UX e soluções personalizadas. O site institucional foi desenvolvido com tecnologia de ponta, oferecendo uma experiência visual impactante e performance otimizada.
+PixelFlow é um projeto integrador desenvolvido por estudantes com o objetivo de simular uma experiência real de mercado, onde uma empresa fictícia foi contratada para criar a presença digital de um cliente.
+
+O projeto foi pensado para representar uma agência moderna de desenvolvimento web, unindo design premium, performance e experiência do usuário em uma landing page totalmente responsiva.
+
+Além da parte visual, o desenvolvimento também teve foco em organização de código, boas práticas de front-end e criação de componentes reutilizáveis.
+
+## 🎯 Objetivo do Projeto
+
+O principal objetivo deste projeto foi aplicar conhecimentos de desenvolvimento web em um cenário próximo ao mercado profissional.
+
+Durante o desenvolvimento, foram trabalhadas habilidades como:
+
+- Estruturação de interfaces modernas
+- Responsividade para diferentes dispositivos
+- Organização e escalabilidade do código
+- Criação de animações e interatividade
+- Experiência do usuário (UX/UI)
+- Performance e otimização
+- Simulação de atendimento e entrega para cliente
 
 ## ✨ Features Principais
 
-- 🎨 **Design Moderno** - Interface contemporânea com animações fluidas
-- 📱 **Totalmente Responsivo** - Funciona perfeitamente em todos os dispositivos
-- ⚡ **Performance Otimizada** - Carregamento rápido e eficiente
-- 🎯 **Animações Suaves** - Efeitos visuais premium com CSS e JavaScript
-- 🌟 **Componentes Reutilizáveis** - Estrutura bem organizada e escalável
-- 📊 **Dashboard Mockup** - Exemplo interativo de interface profissional
-- 🔍 **SEO Friendly** - Otimizado para mecanismos de busca
-- ♿ **Acessibilidade** - Segue boas práticas de acessibilidade web
+- 🎨 Design moderno com animações fluidas
+- 📱 Interface totalmente responsiva
+- ⚡ Performance otimizada
+- 🌟 Efeitos visuais premium
+- 🧩 Componentes reutilizáveis
+- 📊 Dashboard mockup interativo
+- 🔍 Estrutura SEO-friendly
+- ♿ Boas práticas de acessibilidade
 
 ## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
-- **HTML5** - Estrutura semântica
-- **CSS3** - Layouts modernos com Grid e Flexbox
-- **JavaScript Vanilla** - Interatividade sem dependências
-- **Poppins Font** - Tipografia elegante do Google Fonts
+
+- HTML5
+- CSS3
+- JavaScript Vanilla
+- Google Fonts (Poppins)
 
 ### Recursos Especiais
-- Canvas Particles - Efeito de partículas animadas
-- Parallax Background - Efeito parallax na seção hero
-- Intersection Observer API - Animações ao scroll
-- CSS Animations & Transitions - Efeitos suaves
-- Backdrop Filter - Efeito Glass Morphism
+
+- Canvas Particles
+- Parallax Background
+- Intersection Observer API
+- CSS Animations & Transitions
+- Glass Morphism
 
 ## 📁 Estrutura do Projeto
 
-```
+```bash
 pixelflow/
-├── index.html          # Página principal
-├── style.css           # Estilos globais
-├── img/                # Imagens e ícones
-│   ├── p.png          # Logo principal
-│   ├── pixelflow.png  # Logo textual
-│   ├── fundo.png      # Background hero
-│   ├── facebook.png   # Ícone redes sociais
+├── index.html
+├── style.css
+├── img/
+│   ├── p.png
+│   ├── pixelflow.png
+│   ├── fundo.png
+│   ├── facebook.png
 │   ├── instagram.png
 │   ├── linkedin.png
 │   ├── github.png
-│   └── ...            # Outros ícones
-└── README.md          # Este arquivo
+│   └── ...
+└── README.md
 ```
 
-## 🎯 Seções do Site
+## 🖥️ Seções do Site
 
-### 1. **Navbar**
-- Logo responsivo
-- Menu de navegação com links suaves
-- Button CTA destacado
-- Menu mobile com hamburger
+### Hero Section
 
-### 2. **Hero Section**
-- Background com parallax
-- Título impactante com destaque em cor
-- Descrição clara da proposta de valor
-- Botões de ação (Orçamento e Ver Projetos)
-- Chips com diferencias
-- Dashboard mockup interativo
-- Partículas animadas de fundo
+- Efeito parallax
+- Background com partículas animadas
+- Dashboard mockup
+- Call to Actions
+- Layout moderno
 
-### 3. **Serviços**
-- Grid de 6 serviços principais
-- Cards com hover effects
-- Ícones SVG
-- Descrições sucintas
-- Animações ao scroll
+### Serviços
 
-### 4. **Sobre**
-- Apresentação da empresa
-- Visão e valores
-- Grid de 4 estatísticas
-- Logo animada com efeito glow
-- Layout responsivo
+- Cards interativos
+- Hover effects
+- Animações suaves
 
-### 5. **Tecnologias**
-- Showcase de ferramentas utilizadas
-- Pills com logos
-- Grid flexível
+### Sobre
 
-### 6. **Projetos**
-- Portfólio com 6 projetos
-- Cards com thumbnails customizados
-- Hover effects elegantes
-- Tags de categoria
-- CTA para ver mais projetos
+- Informações institucionais
+- Estatísticas
+- Apresentação da proposta da empresa
 
-### 7. **CTA (Contato)**
-- Seção de chamada para ação
-- Icon destacado
-- Botão principal
-- Background com gradiente
+### Tecnologias
 
-### 8. **Footer**
-- Logo e descrição
-- 5 colunas de informações
-- Links de navegação
-- Serviços listados
-- Contato com ícones
-- Redes sociais
-- Copyright
+- Showcase das tecnologias utilizadas
+- Estrutura visual moderna
 
-## 🎨 Paleta de Cores
+### Projetos
 
-```css
---bg-deep: #0a0500          /* Preto profundo */
---bg-mid: #150a00           /* Marrom escuro */
---bg-card: #1a0e00          /* Marrom cartão */
---neon: #ea580c             /* Laranja neon */
---neon-light: #f97316       /* Laranja claro */
---neon-glow: rgba(249, 115, 22, 0.35)  /* Brilho */
---white: #fff8f5            /* Branco quente */
---gray: #c4a99a             /* Cinza médio */
---gray-dark: #5c3d2e        /* Cinza escuro */
---border: rgba(249, 115, 22, 0.18)  /* Bordas sutis */
-```
+- Simulação de portfólio
+- Cards de projetos com categorias
+
+### Contato
+
+- CTA final
+- Informações de contato
+- Footer completo
 
 ## ⚙️ Funcionalidades JavaScript
 
 ### Partículas Animadas
-- 100 partículas com movimento aleatório
-- Linhas de conexão dinâmicas
-- Performance otimizada com requestAnimationFrame
 
-### Parallax Background
-- Efeito parallax na seção hero
-- Scroll-based transform
-- Smooth performance
-
-### Navbar Scroll
-- Background e efeito blur ao scroll
-- Transição suave
-- Fixed positioning
-
-### Mobile Menu
-- Menu responsivo com hamburger
-- Animação de abertura/fechamento
-- Links que fecham o menu
+Sistema de partículas interativas utilizando Canvas API.
 
 ### Scroll Reveal
-- Animações ao entrar em viewport
-- Intersection Observer API
-- Delays escalonados
+
+Animações ao entrar em viewport utilizando Intersection Observer.
+
+### Mobile Menu
+
+Menu responsivo com animações para dispositivos móveis.
+
+### Parallax Effect
+
+Efeito visual suave na seção principal.
 
 ## 📱 Responsividade
 
-O site é totalmente responsivo com breakpoints em:
-- **1024px** - Tablets e iPads
-- **640px** - Mobile phones
+O projeto foi desenvolvido para funcionar perfeitamente em:
 
-Adaptações incluem:
-- Layout grid reduzido
-- Tipografia fluid com clamp()
-- Imagens escalonadas
-- Espaçamento ajustado
-- Menu mobile
+- Desktop
+- Tablets
+- Smartphones
 
-## 🚀 Como Usar
+Breakpoints principais:
 
-### Instalação Local
-1. Clone ou baixe os arquivos do projeto
-2. Abra `index.html` no navegador
-3. Pronto! O site está funcionando
+- 1024px
+- 640px
 
-### Customização
-Para personalizar o site:
+## 🚀 Aprendizados do Projeto
 
-**Cores:**
-- Edite as variáveis CSS em `:root` no `style.css`
+Este projeto integrador permitiu colocar em prática conceitos fundamentais do desenvolvimento front-end moderno.
 
-**Conteúdo:**
-- Modifique o HTML em `index.html`
-- Atualize textos, links e imagens
+Além da parte técnica, também foi uma experiência importante para entender:
 
-**Imagens:**
-- Substitua as imagens na pasta `img/`
-- Mantenha os mesmos nomes ou atualize os src
-
-**Logos:**
-- Substitua `p.png` e `pixelflow.png`
-- Use resolução alta para melhor qualidade
+- Fluxo de criação de um projeto real
+- Organização de interface e experiência do usuário
+- Estruturação visual de uma marca
+- Importância da performance e responsividade
+- Desenvolvimento colaborativo e visão profissional
 
 ## 📊 Performance
 
-- Sem frameworks pesados (HTML/CSS/JS puro)
-- Otimizado para Core Web Vitals
-- Lazy loading de imagens
-- CSS minificado possível
-- JavaScript eficiente
-
-## 🔗 Links Importantes
-
-- **Email:** contato@pixelflow.com.br
-- **Telefone:** (11) 99999-9999
-- **Localização:** São Paulo, SP — Brasil
-- **Redes Sociais:** Facebook, Instagram, LinkedIn, GitHub
-
-## 📝 Animações Principais
-
-### keyframes floatAnim
-Logo flutuante na seção Sobre com movimento vertical suave
-
-### keyframes ringPulse
-Anéis pulsantes ao redor da logo
-
-### keyframes lineFlow
-Linhas animadas na seção hero
-
-### keyframes fadeUp
-Animações de fade e slide ao scroll
-
-### keyframes pulse
-Indicador de status vivo na navbar
+- HTML, CSS e JavaScript puro
+- Estrutura leve
+- Carregamento otimizado
+- Código organizado e escalável
 
 ## 🌐 Compatibilidade
 
-- ✅ Chrome/Chromium
+- ✅ Chrome
 - ✅ Firefox
-- ✅ Safari
 - ✅ Edge
-- ✅ Mobile browsers
+- ✅ Safari
+- ✅ Navegadores Mobile
 
 ## 📄 Licença
 
-Todos os direitos reservados © 2026 PixelFlow. Desenvolvido com ♥ para impulsionar negócios.
+Projeto acadêmico desenvolvido para fins educacionais.
 
 ## 👨‍💻 Desenvolvimento
 
-Desenvolvido com:
-- HTML5 semântico
-- CSS3 moderno
-- JavaScript vanilla
-- Boas práticas de UX/UI
-- Foco em performance
+Projeto desenvolvido como atividade de Projeto Integrador com foco em:
 
-## 📞 Suporte
-
-Para dúvidas ou sugestões:
-- Email: contato@pixelflow.com.br
-- Telefone: (11) 99999-9999
+- Desenvolvimento Front-End
+- UI/UX Design
+- Responsividade
+- Performance
+- Estrutura profissional de landing page
 
 ---
 
-**PixelFlow** — Transformamos ideias em experiências digitais incríveis. 🚀
+# 📢 Publicação para LinkedIn
+
+🚀 Compartilhando um dos projetos que desenvolvi durante meu Projeto Integrador!
+
+Neste projeto, desenvolvemos a PixelFlow, uma agência digital fictícia criada para simular uma experiência real de mercado, onde o cliente contrataria nossa equipe para desenvolver sua presença digital.
+
+A proposta foi criar uma landing page moderna, responsiva e com visual premium, aplicando conceitos atuais de desenvolvimento web e experiência do usuário.
+
+💻 Durante o desenvolvimento, trabalhei com:
+
+• HTML5
+• CSS3
+• JavaScript Vanilla
+• Responsividade
+• Animações e interatividade
+• Estrutura escalável
+• Performance e boas práticas
+
+✨ O projeto conta com:
+
+• Hero com efeito parallax e particles
+• Dashboard mockup interativo
+• Cards animados
+• Scroll reveal
+• Interface responsiva para mobile e desktop
+• Design moderno com foco em UX/UI
+
+Além da parte técnica, esse projeto foi uma experiência muito importante para entender melhor como funciona o desenvolvimento de uma solução digital voltada para um cliente.
+
+Foi uma ótima oportunidade para colocar conhecimentos em prática e evoluir ainda mais no desenvolvimento front-end.
+
+E isso é só o começo. 🚀
+
+📍 São Paulo – SP

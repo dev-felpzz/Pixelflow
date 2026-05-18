@@ -1,0 +1,313 @@
+/* ============================================================
+   TEAM CAROUSEL
+============================================================ */
+
+.team-carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0 50px;
+}
+
+.team-carousel-track {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  gap: 18px;
+  transition: transform 0.45s ease;
+  will-change: transform;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+  padding: 10px 0;
+}
+
+.team-carousel-track.is-dragging {
+  cursor: grabbing;
+  transition: none;
+}
+
+.team-carousel-slide {
+  flex: 0 0 auto;
+  width: 250px;
+}
+
+.team-carousel-slide .profile-team-card {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #0f0f0f;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.team-carousel-slide.is-active .profile-team-card {
+  box-shadow:
+    0 15px 45px rgba(249, 115, 22, 0.25),
+    0 0 0 1px rgba(249, 115, 22, 0.25);
+}
+
+/* ============================================================
+   FRENTE / VERSO — base
+============================================================ */
+
+.team-carousel-slide .profile-card-front,
+.team-carousel-slide .profile-card-hover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.team-carousel-slide .profile-card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top, rgba(249, 115, 22, 0.12), transparent 60%),
+    #111;
+  z-index: 2;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.team-carousel-slide .profile-initials {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(249, 115, 22, 0.08);
+  border: 2px solid rgba(249, 115, 22, 0.5);
+  color: #f97316;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  box-shadow:
+    0 0 25px rgba(249, 115, 22, 0.18),
+    inset 0 0 20px rgba(249, 115, 22, 0.06);
+}
+
+.team-carousel-slide .profile-card-front span {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.team-carousel-slide .profile-card-hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0.96),
+    rgba(10, 10, 10, 0.98)
+  );
+  opacity: 0;
+  transform: scale(0.96);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.team-carousel-slide .profile-card-hover img {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid rgba(249, 115, 22, 0.7);
+  margin-bottom: 18px;
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.2);
+}
+
+.team-carousel-slide .profile-card-content h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.team-carousel-slide .profile-card-content p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   DESKTOP ONLY — hover faz flip (mouse com pointer fino)
+============================================================ */
+
+@media (hover: hover) and (pointer: fine) {
+  .team-carousel-slide .profile-team-card {
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .team-carousel-slide.is-active .profile-team-card {
+    transform: scale(1.03);
+  }
+
+  .team-carousel-slide .profile-team-card:hover .profile-card-front {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+
+  .team-carousel-slide .profile-team-card:hover .profile-card-hover {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================================
+   DOTS
+============================================================ */
+
+.team-carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.team-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.team-carousel-dot.is-active {
+  width: 24px;
+  background: #f97316;
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.45);
+}
+
+/* ============================================================
+   GRADIENTES LATERAIS
+============================================================ */
+
+.team-carousel-wrapper::before,
+.team-carousel-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.team-carousel-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #070707, transparent);
+}
+
+.team-carousel-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #070707, transparent);
+}
+
+/* ============================================================
+   MOBILE / TABLET ≤1024px
+   Card estático: foto + nome + descrição sempre visíveis
+   Zero flip, zero hover, zero animação de virada
+============================================================ */
+
+@media (max-width: 1024px) {
+  .profile-team-grid {
+    display: none !important;
+  }
+
+  .team-carousel-wrapper {
+    display: flex;
+  }
+
+  .team-carousel-track {
+    gap: 18px !important;
+    padding: 10px 0;
+  }
+
+  .team-carousel-slide {
+    width: 220px !important;
+    min-width: 220px !important;
+    max-width: 220px !important;
+    flex: 0 0 auto !important;
+  }
+
+  .team-carousel-slide .profile-team-card {
+    height: auto !important;
+    min-height: 340px !important;
+    cursor: default;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .team-carousel-slide.is-active .profile-team-card {
+    transform: none !important;
+    box-shadow:
+      0 15px 45px rgba(249, 115, 22, 0.25),
+      0 0 0 1px rgba(249, 115, 22, 0.25) !important;
+  }
+
+  /* Obrigatório: card estático e conteúdo SEM flip/ocultação */
+  .profile-card-front {
+    display: none !important;
+  }
+
+  .profile-card-hover {
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    transform: none !important;
+  }
+
+  /* Bloquear TODOS efeitos de interação em touch */
+  .profile-team-card:hover,
+  .profile-team-card:active,
+  .profile-team-card:focus {
+    transform: none !important;
+  }
+
+  .profile-card-hover img {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    object-position: center !important;
+    display: block;
+    margin: 0 auto 14px;
+  }
+
+  /* Centralização e consistência de layout */
+  .team-carousel-slide .profile-card-hover {
+    padding: 28px;
+    text-align: center;
+    transition: none !important;
+    transform: none !important;
+  }
+}

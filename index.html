@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel-team.css" />
     <link rel="icon" href="img/p.png" type="image/png">
 </head>
 
@@ -18,8 +19,10 @@
     <canvas id="particles"></canvas>
 
     <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-        <span class="mobile-close" onclick="closeMobileMenu()">✕</span>
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <span class="mobile-close" role="button" tabindex="0" aria-label="Fechar menu" onclick="closeMobileMenu()" onkeydown="if(event.key==='Enter' || event.key===' '){ closeMobileMenu(); }">✕</span>
+
         <a href="#home" onclick="closeMobileMenu()">Home</a>
         <a href="#servicos" onclick="closeMobileMenu()">Serviços</a>
         <a href="#sobre" onclick="closeMobileMenu()">Sobre</a>
@@ -44,9 +47,10 @@
             <li><a href="#contato">Contato</a></li>
         </ul>
         <button class="btn-cta nav-cta-desktop">Vamos conversar →</button>
-        <div class="hamburger" onclick="openMobileMenu()">
+        <button class="hamburger" type="button" aria-label="Abrir menu" aria-controls="mobileMenu" onclick="openMobileMenu()">
             <span></span><span></span><span></span>
-        </div>
+        </button>
+
     </nav>
 
     <!-- HERO -->
@@ -281,7 +285,7 @@
                 <p class="section-sub">Unimos tecnologia, design e estratégia para entregar soluções digitais modernas,
                     rápidas e eficientes.</p>
             </div>
-                <div class="services-grid">
+            <div class="services-grid">
                 <div class="service-card reveal reveal-delay-1" data-service>
                     <div class="service-icon">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"
@@ -695,156 +699,142 @@
 
     <div class="neon-divider"></div>
 
-    
+
 
     <div class="neon-divider"></div>
 
     <!-- ========= SEÇÃO CARDS PERFIL ========= -->
     <section class="profile-team-section">
 
-      <div class="profile-section-header">
-        <span class="profile-section-tag">NOSSA EQUIPE</span>
-        <h2>Profissionais que fazem a diferença</h2>
-        <p>
-          Conheça alguns especialistas responsáveis pelos nossos projetos e resultados.
-        </p>
-      </div>
-
-      <div class="profile-team-grid">
-
-        <!-- CARD 1 -->
-        <div class="profile-team-card">
-
-          <!-- Estado inicial -->
-          <div class="profile-card-front">
-            <div class="profile-initials">AM</div>
-            <span>Hover</span>
-          </div>
-
-          <!-- Hover -->
-          <div class="profile-card-hover">
-
-            <img
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop"
-              alt="André Martins"
-            >
-
-            <div class="profile-card-content">
-              <h3>André Martins</h3>
-              <p>
-                Desenvolvedor Front-End especializado em interfaces modernas e animações.
-              </p>
-            </div>
-
-          </div>
-
+        <div class="profile-section-header">
+            <span class="profile-section-tag">NOSSA EQUIPE</span>
+            <h2>Profissionais que fazem a diferença</h2>
+            <p>
+                Conheça alguns especialistas responsáveis pelos nossos projetos e resultados.
+            </p>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="profile-team-card">
+        <div class="profile-team-grid">
 
-          <div class="profile-card-front">
-            <div class="profile-initials">CL</div>
-            <span>Hover</span>
-          </div>
+            <!-- CARD 1 -->
+            <div class="profile-team-card">
 
-          <div class="profile-card-hover">
+                <!-- Estado inicial -->
+                <div class="profile-card-front">
+                    <div class="profile-initials">AP</div>
+                    <span>André Pereira</span>
+                </div>
 
-            <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop"
-              alt="Camila Lopes"
-            >
+                <!-- Hover -->
+                <div class="profile-card-hover">
 
-            <div class="profile-card-content">
-              <h3>Camila Lopes</h3>
-              <p>
-                Especialista em branding e marketing digital focado em performance.
-              </p>
+                    <img src="img/AP.jpeg" alt="André Pereira">
+
+                    <div class="profile-card-content">
+                        <h3>André Pereira</h3>
+                        <p>
+                            Front-end developer apaixonado por criar interfaces incríveis e experiências de usuário
+                            memoráveis.
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
 
-          </div>
+            <!-- CARD 2 -->
+            <div class="profile-team-card">
 
-        </div>
+                <div class="profile-card-front">
+                    <div class="profile-initials">FP</div>
+                    <span>Felipe Pereira</span>
+                </div>
 
-        <!-- CARD 3 -->
-        <div class="profile-team-card">
+                <div class="profile-card-hover">
 
-          <div class="profile-card-front">
-            <div class="profile-initials">RF</div>
-            <span>Hover</span>
-          </div>
+                    <img src="img/FP.png" alt="Felipe Pereira">
 
-          <div class="profile-card-hover">
+                    <div class="profile-card-content">
+                        <h3>Felipe Pereira</h3>
+                        <p>
+                            Full Stack web developer com experiência em soluções escaláveis e eficientes.
+                        </p>
+                    </div>
 
-            <img
-              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop"
-              alt="Rafael Ferreira"
-            >
+                </div>
 
-            <div class="profile-card-content">
-              <h3>Rafael Ferreira</h3>
-              <p>
-                Full Stack Developer com experiência em aplicações escaláveis.
-              </p>
             </div>
 
-          </div>
+            <!-- CARD 3 -->
+            <div class="profile-team-card">
 
-        </div>
+                <div class="profile-card-front">
+                    <div class="profile-initials">LO</div>
+                    <span>Lucas Oliveira</span>
+                </div>
 
-        <!-- CARD 4 -->
-        <div class="profile-team-card">
+                <div class="profile-card-hover">
 
-          <div class="profile-card-front">
-            <div class="profile-initials">JS</div>
-            <span>Hover</span>
-          </div>
+                    <img src="IMG/LO.jpeg" alt="Lucas Oliveira">
 
-          <div class="profile-card-hover">
+                    <div class="profile-card-content">
+                        <h3>Lucas Oliveira</h3>
+                        <p>
+                            Back-end developer especializado em sistemas robustos e integrações inteligentes.
+                        </p>
+                    </div>
 
-            <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop"
-              alt="Juliana Souza"
-            >
+                </div>
 
-            <div class="profile-card-content">
-              <h3>Juliana Souza</h3>
-              <p>
-                Gerente de projetos digitais com foco em inovação e liderança.
-              </p>
             </div>
 
-          </div>
+            <!-- CARD 4 -->
+            <div class="profile-team-card">
 
-        </div>
+                <div class="profile-card-front">
+                    <div class="profile-initials">JH</div>
+                    <span>João Henrique</span>
+                </div>
 
-        <!-- CARD 5 -->
-        <div class="profile-team-card">
+                <div class="profile-card-hover">
 
-          <div class="profile-card-front">
-            <div class="profile-initials">BL</div>
-            <span>Hover</span>
-          </div>
+                    <img src="img/JH.jpeg" alt="João Henrique">
 
-          <div class="profile-card-hover">
+                    <div class="profile-card-content">
+                        <h3>João Henrique</h3>
+                        <p>
+                            Infraestrutura e DevOps, garantindo que tudo funcione com performance e segurança máximas.
+                        </p>
+                    </div>
 
-            <img
-              src="https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=600&auto=format&fit=crop"
-              alt="Bruno Lima"
-            >
+                </div>
 
-            <div class="profile-card-content">
-              <h3>Bruno Lima</h3>
-              <p>
-                Analista de dados e automação com foco em resultados inteligentes.
-              </p>
             </div>
 
-          </div>
+            <!-- CARD 5 -->
+            <div class="profile-team-card">
+
+                <div class="profile-card-front">
+                    <div class="profile-initials">JD</div>
+                    <span>José Davi</span>
+                </div>
+
+                <div class="profile-card-hover">
+
+                    <img src="img/DV.jpeg" alt="Davi">
+
+                    <div class="profile-card-content">
+                        <h3>José Davi</h3>
+                        <p>
+                            Infrastrutura e DevOps, garantindo que tudo funcione com performance e segurança máximas.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-
-      </div>
 
     </section>
 
@@ -1024,9 +1014,95 @@
             navbar.classList.toggle('scrolled', window.scrollY > 40);
         }, { passive: true });
 
-        // ── MOBILE MENU ──
-        function openMobileMenu() { document.getElementById('mobileMenu').classList.add('open'); }
-        function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+        // ── MOBILE MENU (premium drawer + overlay) ──
+        const mobileMenuEl = document.getElementById('mobileMenu');
+        const mobileOverlayEl = document.getElementById('mobileOverlay');
+        const hamburgerEl = document.querySelector('.hamburger');
+
+        function isMobileMenuOpen() {
+            return mobileMenuEl && mobileMenuEl.classList.contains('open');
+        }
+
+        function setMobileMenuOpen(nextOpen) {
+            if (!mobileMenuEl || !mobileOverlayEl) return;
+
+            if (nextOpen) {
+                mobileMenuEl.classList.add('open');
+                mobileMenuEl.setAttribute('aria-hidden', 'false');
+
+                mobileOverlayEl.classList.add('open');
+                mobileOverlayEl.setAttribute('aria-hidden', 'false');
+
+                document.body.style.overflow = 'hidden';
+                if (hamburgerEl) hamburgerEl.classList.add('is-open');
+            } else {
+                mobileMenuEl.classList.remove('open');
+                mobileMenuEl.setAttribute('aria-hidden', 'true');
+
+                mobileOverlayEl.classList.remove('open');
+                mobileOverlayEl.setAttribute('aria-hidden', 'true');
+
+                document.body.style.overflow = '';
+                if (hamburgerEl) hamburgerEl.classList.remove('is-open');
+            }
+        }
+
+        function openMobileMenu() {
+            setMobileMenuOpen(true);
+        }
+
+        function closeMobileMenu() {
+            setMobileMenuOpen(false);
+        }
+
+        // For inline onclick attributes
+        window.openMobileMenu = openMobileMenu;
+        window.closeMobileMenu = closeMobileMenu;
+
+
+        function toggleMobileMenu() {
+            setMobileMenuOpen(!isMobileMenuOpen());
+        }
+
+        if (hamburgerEl) {
+            hamburgerEl.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleMobileMenu();
+            });
+        }
+
+
+        // Fechar ao clicar fora
+        if (mobileOverlayEl) {
+            mobileOverlayEl.addEventListener('click', () => {
+                closeMobileMenu();
+            }, { passive: true });
+        }
+
+        // Fechar ao clicar em qualquer link do menu
+        if (mobileMenuEl) {
+            mobileMenuEl.querySelectorAll('a, button').forEach((el) => {
+                el.addEventListener('click', () => {
+                    closeMobileMenu();
+                }, { passive: true });
+            });
+        }
+
+        // ESC fecha
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMobileMenu();
+        });
+
+        // Fechar ao redimensionar (evita menu “preso” em tablet/landscape)
+        let resizeTimer = null;
+        window.addEventListener('resize', () => {
+            if (resizeTimer) clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (isMobileMenuOpen()) closeMobileMenu();
+            }, 120);
+        });
+
 
         // ── SCROLL REVEAL ──
         const observer = new IntersectionObserver((entries) => {
@@ -1034,6 +1110,7 @@
         }, { threshold: 0.12 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
+    <script src="carousel-team.js"></script>
 </body>
 
 </html>
