@@ -1,5 +1,3 @@
-# README — PixelFlow
-
 # PixelFlow — Desenvolvimento Web Premium
 
 ![PixelFlow](img/pixelflow.png)
